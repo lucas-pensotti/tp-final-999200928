@@ -1,9 +1,14 @@
-import { useState} from "react"
+import { useState, useContext} from "react"
+import { ChatContext } from "../context/ChatContext"
+import { useNavigate } from "react-router-dom"
 
 const Registro = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [name, setName] = useState("")
+
+    const { users, setUsers, handleUser } =useContext(ChatContext)
+    const redirigir = useNavigate()
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -19,16 +24,27 @@ const Registro = () => {
         } else if (password.length < 6) {
             alert("La contraseña debe tener al menos 6 caracteres")    
         } else {
-            console.log({
-                name: name,
-                email: email,
-                password: password,
-            })
+            const newUser = {
+                id: users.length +1,
+                name,
+                email,
+                password,
+                messages: []
+            }
+
+        // agrega el usuario 
+        setUsers(prev => [...prev, newUser])
+
+        // logea 
+        handleUser(newUser)
 
         // limpia el estado
         setName("")
         setEmail("")
         setPassword("")
+
+        // vuelve al home
+        redirigir("/")
         }
     }
 
@@ -50,7 +66,7 @@ const Registro = () => {
             <input type="text" placeholder="Ingrese su nombre" required name="name" onChange={handleChange} value={name} />
             <input type="email" placeholder="Ingrese su email" required name="email" onChange={handleChange} value={email} />
             <input type="password" placeholder="Ingrese su contraseña" required name="password" onChange={handleChange} value={password} />
-            <button>Iniciar Sesión</button>
+            <button>Registrarse</button>
         </form>
         {!email && <p>No has ingresado ningún email</p>}
         {email && <p>Valor del mail actualizado: {email}</p>} 

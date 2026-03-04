@@ -34,7 +34,7 @@ const Aside = () => {
               <img src={user.image} alt="" />
               <div>
                 {user.firstName} {user.lastName}
-                <small>{user.address.country}</small>
+                <small>{user.address?.country}</small>
               </div>
             </li>
           ))

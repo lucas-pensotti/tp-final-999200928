@@ -47,7 +47,7 @@ const ChatProvider = ({ children }) => {
   const selectedUser = users.find(user => user.id === selectedUserId)
 
   return (
-    <ChatContext.Provider value={{ users, handleSelectedUserId, login, logout, handleUser, loggedUser, handleMessages, selectedUser }}>
+    <ChatContext.Provider value={{ users, setUsers, handleSelectedUserId, login, logout, handleUser, loggedUser, handleMessages, selectedUser }}>
       {children}
     </ChatContext.Provider>
   )
