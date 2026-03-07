@@ -1,16 +1,34 @@
-# React + Vite
+# Proyecto Final 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción del proyecto
 
-Currently, two official plugins are available:
+El proyecto consiste en que el usuario pueda registrarse mediante un formulario en el cual debe ingresar su nombre, su email y una contraseña para crear una cuenta dentro de la aplicación, lo cual incluye validaciones para verificar que los datos sean correctos antes de registrarse, accediendo así a una interfaz de chat entre varios usuarios desplegando una lista de contactos y sus conversaciones correspondientes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas:
 
-## React Compiler
+- HTML
+- CSS
+- JavaScript
+- React
+- Vite
+- LocalStorage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Instrucciones para ejecutar el proyecto localmente
 
-## Expanding the ESLint configuration
+1- En el escritorio ingresar a git bash y clonar el repositorio con el comando: git clone https://github.com/utn-courses/tp-final-999200928.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2- Ingresar a la carpeta con el comando: cd tp-final-999200928
+
+3- Instalar las dependencias utilizando: npm install
+
+4- Ejecutar el proyecto escribiendo: npm run dev
+
+5- Abrir el link en el navegador con Ctrl + Click sobre la ruta: http://localhost:5173 
+
+## Instrucciones para el Deploy
+
+Para ejecutar el proyecto es necesario usar el siguiente comando: npm run build . Esto crea una carpeta Dist con archivos para publicarlos en el servidor. 
+
+## Estructura del proyecto
+
+El proyecto está organizado en distintas carpetas, y una de ellas es "components", que contiene componentes reutilizables como por ejemplo la barra lateral del chat. La carpeta "context" que se utiliza para guardar información del usuario y poder compartirla entre distintos componentes. Luego se encuentra "views" donde están las páginas principales de la aplicación como Registro, Login, el chat, etc.. y por último el archivo "main.jsx" que funciona como entrada a la aplicación, donde se ejecuta React.
