@@ -55,7 +55,9 @@ const Login = () => {
         <p>
           ¿No tenés una cuenta?    
           <br />  
-          <Link to="/Registro">Registrate aquí</Link>   
+          <Link to="/Registro" className="registrate-aqui">Registrate aquí</Link>   
+          <br />
+          <Link to="/Acerca" className="acerca-del-proyecto" >Acerca del proyecto</Link>
         </p>      
       </form>
     </section>
