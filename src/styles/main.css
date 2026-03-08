@@ -230,6 +230,7 @@ section .title-login {
   text-align: center;
   margin-top: 60px;
   font-weight: 500;
+  color: black;
 }
 
 section form input {
@@ -262,6 +263,10 @@ section form button:hover {
   text-align: center;
   color: rgb(216, 26, 26);
   font-size: 15px;
+}
+
+p {
+  text-align: center;
 }
 
 @media (max-width: 880px) {

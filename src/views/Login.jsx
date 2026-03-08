@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 import { ChatContext } from "../context/ChatContext"
 import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Login = () => {
   const [email, setEmail] = useState("")
@@ -51,6 +52,11 @@ const Login = () => {
         {
           error && <p className="error-form">Error al ingresar</p>
         }
+        <p>
+          ¿No tenés una cuenta?    
+          <br />  
+          <Link to="/Registro">Registrate aquí</Link>   
+        </p>      
       </form>
     </section>
   )

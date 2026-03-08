@@ -66,7 +66,7 @@ const Registro = () => {
         <section>        
             <div className="registro">
                 <form className="formulario" onSubmit={handleSubmit}> 
-                    <h1>FORMULARIO</h1>
+                    <h2>CREAR UNA CUENTA</h2>
                     <h3>Nombre Completo</h3>
                     <input type="text" placeholder="Ingrese su nombre" required name="name" onChange={handleChange} value={name} />
                     <h3>E-mail</h3>

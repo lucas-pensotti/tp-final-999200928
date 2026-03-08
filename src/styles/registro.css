@@ -23,7 +23,7 @@
     border-radius: 10px;
 }
 
-h1, h3 {
+h2, h3 {
     color: var(--white-100);
     text-align: center;
 }
