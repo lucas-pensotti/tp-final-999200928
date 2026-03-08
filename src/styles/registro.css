@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #741fda;
+    --violet-500: #240a6a;
+    --violet-400: #341478;
+    --violet-200:#8056d4;
+    --violet-100: #af85ff;
+    --green-100: #dcf8c6;
+    --white-100: #fdf5fe;
+}
+
+.registro {
+    background: linear-gradient(var(--violet-500), var(--primary-color) );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    background: linear-gradient(var(--primary-color), var(--violet-500));
+    box-shadow: 0 0 17.5px var(--white-100);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1, h3 {
+    color: var(--white-100);
+    text-align: center;
+}
+
+.registro input {
+    width: 100%;
+    background-color: var(--violet-100);
+    box-shadow: 0 0 5px var(--white-100);
+    font-weight: bolder;
+}
+
+.registro input::placeholder {
+    color: var(--white-100);
+    text-align: center;
+    font-style: italic;
+    font-family: sans-serif;
+    font-size:13px;
+    
+    
+}
+
+.registrarse {
+    background-color: var(--violet-200);
+    box-shadow: 0 0 5px var(--white-100);
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.registrarse:hover {
+    background-color: var(--green-100);
+    color: var(--violet-400);
+}

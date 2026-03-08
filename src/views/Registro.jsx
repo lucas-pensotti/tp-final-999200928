@@ -1,6 +1,7 @@
 import { useState, useContext} from "react"
 import { ChatContext } from "../context/ChatContext"
 import { useNavigate } from "react-router-dom"
+import "../styles/registro.css"
 
 const Registro = () => {
     const [email, setEmail] = useState("")
@@ -61,15 +62,21 @@ const Registro = () => {
     }
 
     return (
-        <>
-        <form onSubmit={handleSubmit}> 
-            <input type="text" placeholder="Ingrese su nombre" required name="name" onChange={handleChange} value={name} />
-            <input type="email" placeholder="Ingrese su email" required name="email" onChange={handleChange} value={email} />
-            <input type="password" placeholder="Ingrese su contraseña" required name="password" onChange={handleChange} value={password} />
-            <button>Registrarse</button>
-        </form>
-        {!email && <p>No has ingresado ningún email</p>}
-        {email && <p>Valor del mail actualizado: {email}</p>} 
+        <>        
+        <section>        
+            <div className="registro">
+                <form className="formulario" onSubmit={handleSubmit}> 
+                    <h1>FORMULARIO</h1>
+                    <h3>Nombre Completo</h3>
+                    <input type="text" placeholder="Ingrese su nombre" required name="name" onChange={handleChange} value={name} />
+                    <h3>E-mail</h3>
+                    <input type="email" placeholder="Ingrese su email" required name="email" onChange={handleChange} value={email} />
+                    <h3>Contraseña</h3>
+                    <input type="password" placeholder="Ingrese su contraseña" required name="password" onChange={handleChange} value={password} />
+                <button className="registrarse" >Registrarse</button>
+            </form>
+            </div>
+        </section>    
         </>
     )
 }
